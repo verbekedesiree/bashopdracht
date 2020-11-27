@@ -14,9 +14,9 @@ while true; do
 				netmask 255.255.255.0
 				network 192.168.1.0
 				broadcast 192.168.1.255
-			" >> /etc/network/interfaces
+			" > /etc/network/interfaces
 			echo "ip ingesteld, restart network"
-			sudo systemctl restart network
+			sudo systemctl restart networking.service
 			
 			echo "done"; break;;
 	[Dd]* ) echo "dhcp zetten"
@@ -26,9 +26,9 @@ while true; do
 			
 			auto ens192
 			iface ens192 inet dhcp
-			" >> /etc/network/interfaces
+			" > /etc/network/interfaces
 			echo "ip ingesteld, restart network"
-			sudo systemctl restart network
+			sudo systemctl restart networking.service
 			echo "done"; exit;;
 	esac
 done
