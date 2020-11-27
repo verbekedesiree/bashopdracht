@@ -7,7 +7,7 @@ LOG_LOC = "/var/log/mybackup.log"
 
 function check_dir_loc {
 		#check for dir list file
-		if [ ! -s "/backup_dir.conf" ]
+		if [ ! -s "/backup_dir.conf" ];
 		then 
 			echo "please create a list of directories to backup by creating a backup_dir. conf file in the root directorty"
 			exit 1 
@@ -16,7 +16,7 @@ function check_dir_loc {
 }
 
 function check_backup_loc {
-		if [ ! -s "/backup_loc.conf"]
+		if [ ! -s "/backup_loc.conf" ];
 		then
 			echo "please specify the full path of where to send the backup to, by creating the backup_loc.conf file in the root directory"
 			exit 1
@@ -25,7 +25,7 @@ function check_backup_loc {
 
 function check_schedule {
 		#check to see if script exists in weekly cron directory
-		if [ ! -s "/etc/cron.weekly/make_backup"]
+		if [ ! -s "/etc/cron.weekly/make_backup" ];
 		then 
 			sudo cp make_backup.sh /etc/cron.weekly/make_backup	
 			echo "the backup schedule has been set to run weekly"
@@ -62,7 +62,7 @@ function perform_backup {
 
 tar -czvf /home/user/backups/backupfile.tar /home/user/testfiles/
 
-if [ ! -s "/etc/cron.weekly/make_backup"]
+if [ ! -s "/etc/cron.weekly/make_backup" ];
 		then 
 			sudo cp make_backup.sh /etc/cron.weekly/make_backup	
 			echo "the backup schedule has been set to run weekly"
