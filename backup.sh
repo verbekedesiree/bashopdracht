@@ -11,7 +11,7 @@ fi
 echo '321' | su root 
 
 echo 'tijd wordt aangepast naar zondag om 17uur'
-sudo echo '
+echo '321' sudo echo '
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
