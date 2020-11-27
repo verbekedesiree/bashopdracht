@@ -5,7 +5,7 @@
 LOG_LOC = "/var/log/mybackup.log"
 
 
-function check_dir_loc{
+function check_dir_loc {
 		#check for dir list file
 		if [ ! -s "/backup_dir.conf" ]
 		then 
@@ -15,7 +15,7 @@ function check_dir_loc{
 		
 }
 
-function check_backup_loc{
+function check_backup_loc {
 		if [ ! -s "/backup_loc.conf"]
 		then
 			echo "please specify the full path of where to send the backup to, by creating the backup_loc.conf file in the root directory"
