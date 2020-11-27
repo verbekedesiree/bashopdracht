@@ -1,3 +1,5 @@
+## deze file uitvoeren als root. su root ...
+
 tar -czvf /home/user/backups/backupfile.tar /home/user/testfiles/
 
 if [ ! -s "/etc/cron.weekly/make_backup" ];
@@ -8,10 +10,8 @@ if [ ! -s "/etc/cron.weekly/make_backup" ];
 			exit 1
 fi
 
-echo '321' | su root 
-
 echo 'tijd wordt aangepast naar zondag om 17uur'
-echo '321' sudo echo '
+sudo echo '
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 

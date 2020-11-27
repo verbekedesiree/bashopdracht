@@ -10,10 +10,10 @@ while true; do
 			auto ens192
 			iface ens192 inet static
 				address 192.168.100.12
-				gateway 192.168.1.1
+				gateway 192.168.100.254
 				netmask 255.255.255.0
-				network 192.168.1.0
-				broadcast 192.168.1.255
+				network 192.168.100.0
+				broadcast 192.168.100.255
 			" > /etc/network/interfaces
 			echo "ip ingesteld, restart network"
 			sudo systemctl restart networking.service
