@@ -1,7 +1,6 @@
-subnet 192.168.100.128 netmask 255.255.255.128 {
-        range 192.168.100.129 192.168.100.150;
-        option routers 192.168.100.254;
-        option broadcast-address 192.168.100.255;
-        default-lease-time 3600;
-        max-lease-time 7200;
+subnet 192.168.100.0 netmask 255.255.255.0{
+range 192.168.100.129 192.168.100.191;
+option routers 192.168.100.254;
+option domain-name "intranet.mijnschool.be";
+option domain-name-servers 192.168.100.2;
 }
