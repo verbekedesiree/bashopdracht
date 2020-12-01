@@ -2,6 +2,8 @@ sudo apt install -y isc-dhcp-server
 
 cp /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf_backup
 
+rm  -rf /etc/dhcp/dhcpd.conf
+
 cp /home/user/bashopdracht/installdhcp.txt /etc/dhcp/dhcpd.conf
 
 
