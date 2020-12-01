@@ -25,6 +25,7 @@ while true; do
 			auto lo
 			
 			auto ens192
+			allow-hotplug ens192
 			iface ens192 inet dhcp
 			" > /etc/network/interfaces
 			echo "ip ingesteld, restart network"
