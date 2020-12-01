@@ -10,6 +10,6 @@ cp /etc/default/isc-dhcp-server /etc/default/isc-dhcp-server_backup
 echo '
 INTERFACESv4="ens192"
 #INTERFACESv6=""
-' >> /etc/default/isc-dhcp-server
+' > /etc/default/isc-dhcp-server
 
 systemctl restart isc-dhcp-server
